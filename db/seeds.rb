@@ -7,3 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Greetings.create(greeting: 'Hello World')
+Greetings.create(greeting: "What's up")
+Greetings.create(greeting: 'Good Morning')
+Greetings.create(greeting: 'Good Evening')
