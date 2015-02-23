@@ -1,0 +1,13 @@
+<h1>List All Greetings</h1>
+<table>
+	<tr>
+		<th>Greeting</th>
+	</tr>
+<% @greeting.each do |greet| %>
+	<tr>
+		<td><%= greet.greeting %></td>
+		<td><%= link_to 'Edit', edit_greeting_path(@greeting, greet) %></td>
+		<td><%= link_to 'Destroy', [greet.id], method :delete %></td>
+	</tr>
+	<% end %>
+</table>
