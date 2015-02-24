@@ -1,0 +1,9 @@
+<h1>Edit Greeting in Database</h1>
+
+<div>
+	<%= form_for(@greeting) do |f| %>
+		<%= f.label :greeting %>
+		<%= f.text_field :greeting %>
+		<%= f.submit "Save" %>
+	<% end %>
+</div>
