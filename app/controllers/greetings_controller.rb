@@ -26,12 +26,9 @@ class GreetingsController < ApplicationController
   end
 
   def update
-    @greeting = Greetings.find(params[:id])
-    if @greeting.update_attributes(params[:greeting])
-      flash[:notice] = "You have updated this greeting"
-    else
-      render("edit")
-    end
+    g = Greetings.find(params[:id])
+    g.update(params[:greeting])
+    g.save
   end
 
 
