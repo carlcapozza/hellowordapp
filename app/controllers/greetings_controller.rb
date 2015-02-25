@@ -27,8 +27,9 @@ class GreetingsController < ApplicationController
 
   def update
     g = Greetings.find(params[:id])
-    g.update(params[:greeting])
+    g.update(params[:greetings].permit(:greeting))
     g.save
+    redirect_to :action => 'index', :format => 'html'
   end
 
 
