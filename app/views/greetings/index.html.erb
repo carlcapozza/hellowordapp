@@ -2,10 +2,12 @@
 <div>
 	<table>
 		<tr>
+			<th>Index</th>
 			<th>Greeting</th>
 		</tr>
 	<% @greeting.each do |greet| %>
 		<tr>
+			<td><%= greet.id %>
 			<td><%= greet.greeting %></td>
 			<td><%= link_to "Edit", edit_greeting_path(greet) %></td>
 			<td><%= link_to "Delete", greet, method: :delete %></td>
@@ -14,5 +16,5 @@
 	</table>
 </div>
 <div>
-	<p><%= link_to 'Create New Greeting', new_greeting_path %></p>
+	<p><%= link_to 'Create New Greeting', greetings_path, method: :new %></p>
 </div>

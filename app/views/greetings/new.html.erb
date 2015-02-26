@@ -1,9 +1,7 @@
 <h1>Add a New Greeting to the Database</h1>
 
-<div>
-	<%= form_for() do |f| %>
+	<%= form_for(@greeting) do |f| %>
 		<%= f.label :greeting %>
 		<%= f.text_field :greeting %>
 		<%= f.submit "Submit" %>
 	<% end %>
-</div>

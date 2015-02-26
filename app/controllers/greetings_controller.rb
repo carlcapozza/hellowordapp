@@ -30,8 +30,16 @@ class GreetingsController < ApplicationController
 
 
   def new
-    @greeting = Greetings.new(params[:greetings])
+    @greeting = Greetings.new
   end
+
+  def create
+    @greeting = Greetings.new(params[:greetings])
+    if @greeting.save
+      render 'new'
+    end
+  end
+
 
   def destroy
     @greeting.destroy
