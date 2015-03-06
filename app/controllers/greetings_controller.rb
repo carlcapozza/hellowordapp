@@ -37,6 +37,8 @@ class GreetingsController < ApplicationController
     @greeting = Greetings.new(params[:greetings])
     if @greeting.save
       render 'new'
+    else
+      flash[:notice] = "We failed to create your new greeting."
     end
   end
 
