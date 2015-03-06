@@ -23,7 +23,7 @@ class GreetingsController < ApplicationController
   end
 
   def update
-    @greeting.update(params[:greetings].permit(:greeting))
+    @greeting.update!(params[:greetings].permit(:greeting))
     @greeting.save
     return_to_index
   end
